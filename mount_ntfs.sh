@@ -15,7 +15,9 @@ function processs() {
     while read -r line ; do
        disk_path=$(echo $line | awk -F" " '{print $NF}')
        break
-    done < <(diskutil list | grep $disk_name)
+    # done < <(diskutil list | grep $disk_name)
+    # bash version 3.0
+    done <<< `diskutil list | grep $disk_name`
     if [ "$disk_path" == "" ]; then
         echo $disk_name" not found, please check your disk (or dev) name"
         exit 1
