@@ -9,6 +9,7 @@ usage:
 
 !!!Make sure your u-disk or hard drive name. You can use "**diskutil list**" to check.
 
+`chmod +x ./mount_ntfs.sh`
 
 If my disk is "TOSHIBA", this command wolud be like: `sudo ./mount_ntfs.sh -n TOSHIBA`  *REMEMBER sudo* .
 
